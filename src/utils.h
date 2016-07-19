@@ -30,6 +30,10 @@ typedef struct
 } change_varno_context;
 
 
+void execute_on_xact_mcxt_reset(MemoryContext xact_context,
+								MemoryContextCallbackFunction cb_proc,
+								void *arg);
+
 List * list_reverse(List *l);
 
 bool clause_contains_params(Node *clause);
